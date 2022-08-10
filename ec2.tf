@@ -39,7 +39,7 @@ resource "null_resource" "ansible" {
     }
 
     inline = [
-      "ansible-pull -U https://github.com/raghudevopsb65/roboshop-ansible.git roboshop.yml -e HOST=localhost -e ROLE=${var.COMPONENT} -e ENV=ENV -e DOCDB_ENDPOINT=DOCDB_ENDPOINT -e REDIS_ENDPOINT=REDIS_ENDPOINT -e MYSQL_ENDPOINT=MYSQL_ENDPOINT -e DOCDB_USER=DOCDB_USER -e DOCDB_PASS=DOCDB_USER -e SECRETS=SECRET -e RABBITMQ_USER_PASSWORD=RABBITMQ_USER_PASSWORD",
+      "ansible-pull -U https://github.com/raghudevopsb65/roboshop-ansible.git roboshop.yml -e HOST=localhost -e ROLE=${var.COMPONENT} -e ENV=ENV -e DOCDB_ENDPOINT=DOCDB_ENDPOINT -e REDIS_ENDPOINT=REDIS_ENDPOINT -e MYSQL_ENDPOINT=MYSQL_ENDPOINT -e DOCDB_USER=DOCDB_USER -e DOCDB_PASS=DOCDB_PASS -e SECRETS=SECRET -e RABBITMQ_USER_PASSWORD=RABBITMQ_USER_PASSWORD",
     ]
   }
 }
