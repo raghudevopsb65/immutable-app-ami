@@ -8,6 +8,9 @@ resource "aws_instance" "instance" {
 }
 
 resource "null_resource" "copy-local-artifact" {
+  triggers = {
+    abc = timestamp()
+  }
   provisioner "file" {
 
     connection {
@@ -23,6 +26,9 @@ resource "null_resource" "copy-local-artifact" {
 }
 
 resource "null_resource" "ansible" {
+  triggers = {
+    abc = timestamp()
+  }
   depends_on = [null_resource.copy-local-artifact]
   provisioner "remote-exec" {
 
